@@ -1,0 +1,12 @@
+<section class="accordion">
+    <h2 class="accordion__block-title">Banners Place</h2>
+    {% for key in accordion %}
+    <div>
+        <input id="ac-{{ loop.index }}" name="accordion__select" type="radio" {% if loop.index == 1 %}checked{% endif %}/>
+        <label for="ac-{{ loop.index }}">{{ accordion[loop.index0][0] }}</label>
+        <article>
+            <p>{{accordion[loop.index0][1]}}</p>
+        </article>
+    </div>
+    {% endfor %}
+</section>

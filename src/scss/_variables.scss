@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
+$c-1: #1a1915; // Header background
+$c-2: white; // Header text
+$c-3: #ff4e50; // Button background
+$c-4: #333; // Headlight
+$c-5: #666; // Headlight
+$c-6: #ccc; // Headlight
+$ff-1: 'Montserrat', sans-serif;
+$ff-2: 'Roboto', sans-serif;
+$fs-1: 14px;
+$fs-2: 22px;
+$fs-3: 18px;
+$fs-4: 16px;
+$fs-5: 10px;
+
+$tablet-width: 640px; //768px;
+$desktop-width: 960px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

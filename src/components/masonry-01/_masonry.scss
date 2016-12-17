@@ -1,0 +1,88 @@
+.grid {
+  box-sizing: border-box;
+  margin-top: 13px;
+
+  @include tablet {
+    margin-top: 33px;
+    margin-right: -20px; //pp
+  }
+
+  @include desktop {
+    margin-left: 10px;
+    margin-right: -10px;
+  }
+}
+
+.grid-item {
+
+  width: 100%;
+
+  @include tablet {
+    float: left;
+    width: 33.33%;
+  }
+}
+.grid-item--width2 {
+
+  @include tablet {
+    float: left;
+    width: 66.66%;
+  }
+
+}
+
+.grid-content {
+  margin-bottom: 10px;
+  border-radius: 4px;
+//  height: 120px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+
+ // background: url("http://lorempixel.com/500/400");
+
+  @include tablet {
+   // height: 310px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+}
+
+.grid-content div {
+ // background: rgba(42, 43, 46, 0.5);
+  color: $c-2;
+  text-shadow: 0 0 3px #333333;
+  padding: 5px 10px;
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  box-sizing: border-box;
+  width: 85%;
+}
+
+.grid-content img + div {
+  position: absolute;
+}
+
+.grid-height {
+  height: 120px;
+
+  @include tablet {
+    height: 310px;
+  }
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}

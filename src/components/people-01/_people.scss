@@ -1,0 +1,118 @@
+.people-wrapper {
+  margin-top: 33px;
+  text-align: center;
+
+  @include tablet {
+    margin-top: 96px;
+  }
+}
+
+.people {
+
+  width: 236px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0;
+
+  @include tablet {
+    width: 492px;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+
+
+}
+
+.people__block {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  @include tablet {
+    width: 236px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    width: 220px;
+  }
+}
+
+.people__block:nth-child(odd) {
+  @include tablet {
+    margin-right: 20px;
+  }
+}
+
+.people__block:not(:last-child) {
+  @include desktop {
+    margin-right: 20px;
+  }
+}
+
+.people__image {
+  width: 122px;
+  height: 122px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.people__image img {
+  border-radius: 50%;
+  width: 122px;
+  height: 122px;
+}
+
+.people__image:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: url(img/sprite.png);
+  border: 3px solid $c-2;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  bottom: -2px;
+  right: -2px;
+  z-index: 8;
+}
+
+.people__image--1:after {
+  background-position: -113px 6px;
+  background-color: #ff4e50;
+}
+
+.people__image--2:after {
+  background-position: -73px -29px;
+  background-color: #1cd7ad;
+}
+
+.people__image--3:after {
+  background-position: -112px -20px;
+  background-color: #ffa507;
+}
+
+.people__image--4:after {
+  background-position: -75px -54px;
+  background-color: #4e73db;
+}
+
+.people__title {
+  font-size: $fs-1;
+  color: $c-4;
+  margin-top: 17px;
+}
+
+.people__info {
+  font-family: $ff-2;
+  font-size: $fs-1;
+  color: $c-5;
+  margin-top: 10px;
+  letter-spacing: 0.1px; // PP
+
+}
+

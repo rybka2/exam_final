@@ -1,0 +1,11 @@
+<div class="people">
+    {% for key in people %}
+    <div class="people__block">
+        <div class="people__image people__image--{{ people[loop.index0][0] }}">
+            <img src="{{ people[loop.index0][1] }}" alt="">
+        </div>
+        <h3 class="people__title">{{ people[loop.index0][2] }}</h3>
+        <div class="people__info">{{ people[loop.index0][3] }}</div>
+    </div>
+    {% endfor %}
+</div>

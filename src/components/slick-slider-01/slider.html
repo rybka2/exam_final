@@ -1,0 +1,12 @@
+<div class="slick">
+    {% for key in slider %}
+    <div class="slick__slide">
+        <img class="slick__image" src="{{ slider[loop.index0][3] }}" alt="">
+        <div class="slick__content">
+            <div class="slick__label">{{ slider[loop.index0][0] }}</div>
+            <div class="slick__title">{{ slider[loop.index0][1] }}</div>
+            <div class="slick__info">{{ slider[loop.index0][2] }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

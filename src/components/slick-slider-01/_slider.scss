@@ -1,0 +1,160 @@
+$slider_fs-1: 24px;
+$slider_fs-2: 14px;
+$slider_fs-3: 10px;
+$slider_c-1: #ff4e50;
+$slider_c-2: white;
+$slider_c-3: #cccccc;
+
+.slider {
+  margin-top: 4px;
+  font-size: 0;
+
+  @include tablet {
+    margin-right: -20px;
+    margin-top: 24px;
+  }
+
+  @include desktop {
+    margin-left: 10px;
+    margin-right: -10px;
+  }
+
+}
+
+.slick {
+//  box-sizing: border-box;
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+
+  @include tablet {
+    width: 33.33%;
+    height: 400px;
+    padding-right: 20px;
+  }
+
+}
+
+.slick:last-child {
+ // padding-right: 0;
+}
+
+.slick__content {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  max-width: 100%;
+  z-index: 2;
+  line-height: 1.2;
+}
+
+.slick__label {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: $slider_c-1;
+  color: $slider_c-2;
+  text-transform: uppercase;
+  font-family: $ff-1;
+  font-size: $slider_fs-3;
+  display: inline-block;
+  line-height: 2;
+  padding: 0 15px;
+  letter-spacing: 2px;
+}
+
+.slick__title {
+  font-size: $slider_fs-1;
+  font-family: $font-family-1;
+  color: $slider_c-2;
+  letter-spacing: 1.7px;
+  margin-top: 15px;
+}
+
+.slick__info {
+  color: $slider_c-3;
+  font-size: $slider_fs-2;
+  font-family: $ff-2;
+  margin-top: 10px;
+}
+
+.slick-arrow {
+  position: absolute;
+  top:40px;
+  z-index: 3;
+  display: none !important;
+  background-color: transparent;
+  background-image: url(img/sprite.png);
+  border: 0;
+  outline:none;
+  font-size: 0;
+  width: 30px;
+  height: 56px;
+  opacity: 0.6;
+
+  @include tablet {
+    display: block !important;
+  }
+
+  @include desktop {
+    top: 150px;
+  }
+
+}
+
+.slick-arrow:hover {
+  opacity: 1;
+}
+
+
+.slick-prev {
+  left: 20px;
+  background-position: 0px -34px;
+}
+
+.slick-next {
+  right: 40px;
+  background-position: -40px -34px;
+}
+
+.slick__slide {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  border-radius: 4px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    height: 400px;
+  }
+}
+
+.slick__slide:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255,133,35,0);
+  background-image: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));
+}
+
+.slick-list {
+  border-radius: 4px;
+}
+
+.slick__image {
+  width: 100%;
+
+  @include tablet {
+    height: 400px; // IE8
+  }
+
+}
+

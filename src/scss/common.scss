@@ -1,0 +1,160 @@
+@import "variables";
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.goto {
+  font-size: $fs-1;
+  line-height: 32px;
+  color: $c-2;
+  background-color: $c-3;
+  border: 2px solid $c-3;
+  border-radius: 20px;
+  text-decoration: none;
+  display: block;
+  padding: 0 15px;
+  text-align: center;
+  outline: 0;
+}
+
+.goto:hover {
+  border-color: $c-2;
+}
+
+
+.goto--people {
+  background: none;
+  border-color: $c-3;
+  color: $c-3;
+  display: block;
+  margin: 10px;
+
+  @include tablet {
+    display: inline-block;
+    margin: 7px 0 0 0;
+    padding: 0 30px;
+  }
+}
+
+.goto--people:hover {
+  border-style: dotted;
+  border-color: $c-3;
+}
+
+.wrapper {
+  font-family: $ff-1;
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+.slider__section__name {
+  color: $c-4;
+  font-size: $fs-2;
+  text-align: center;
+// margin-left: -10px; // PP
+}
+
+.slider {
+  margin-top: 25px;
+
+  @include tablet {
+    margin-top: 84px;
+  }
+}
+
+.pic {
+  margin-top: 35px;
+
+  @include tablet {
+    margin-top: 97px;
+  }
+}
+
+.search {
+  margin-top: 26px;
+
+  @include tablet {
+    margin-top: 75px;
+  }
+
+  @include desktop {
+    margin-top: 79px;
+  }
+}
+
+.search__form {
+  margin: 14px auto 0;
+  padding: 0 10px;
+
+
+  @include tablet {
+    margin-top: 36px;
+    width: 415px;
+  }
+}
+
+.search__form input {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#search__box {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px #eee;
+  border: solid 1px #ccc;
+  padding: 0 15px;
+
+  @include tablet {
+    box-sizing: content-box;
+    width: 208px;
+  }
+}
+
+.search__button {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+
+
+  @include tablet {
+    width: 160px;
+    margin-top: 0;
+    margin-left: 5px;
+  }
+}
+
+.search__button:hover {
+  border-color: $c-3;
+  opacity: 0.9;
+}
+
+.search__subtitle {
+  text-align: center;
+  font-family: $ff-2;
+  font-size: $fs-3;
+  margin-top: 8px;
+
+  @include tablet {
+    margin-top: 28px;
+  }
+
+}
+
+@import "header";
+@import "footer";
+@import "../components/accordion-01/accordion";
+@import "../components/slick-slider-01/slider";
+@import "../components/people-01/people";
+@import "../components/masonry-01/masonry";
